@@ -1,12 +1,14 @@
 # Ads-Fraudulent-Click-Traffic-Detection
 ## Goal
-Our study aims to learn if there is any potential undiscovered symptoms that people would like to share on their social media. The data is gained from Tweet API which enables us to gain daily tweet. We saved those on the server. By extracting and visualizing these data, we try to learn things behind these daily tweets.
-## Data Collection
-The data is collected using Tweet API, and we only colletec tweets data about COVID-19
-## EDA
-To find the correlation between time and click-count & click through
-1. Sampling data
-2. Handle Missing Value
+Prevent click fraud for app developers by measuring and detecting  user’s click across their portfolio, and flag IP addresses who produce lots of clicks, but never end up installing apps. Fraudulent click traffic may bring unnecessary cost on advertisement investment.
+## Data
+The data source is provided bt Talking Data. China’s largest independent big data service platform, covers over 70% of active mobile devices nationwide. They handle 3 billion clicks per day, of which 90% are potentially fraudulent. The data could be downloaded from https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection
+## Steps
+•	Built meta-classifier (LR, LightGBM, CNN) to identify fraudulent click and explore important factors that affect ads conversion rate based on context features (IP, app channels, device...) & user behavior features (click frequency under different group-by conditions)
+•	Performed EDA (Exploratory Data Analysis) on 40GB+ clicks data from mobile devices and preprocess on outliers and missing value 
+•	Conducted feature extraction by transforming raw time data into multiple high-quality features such as click interval, weekly clicks
+•	Built meta-classifier via hyper-parameters tuning and 5-fold cross validation, finally get ROC AUC (0.97) and identified key factors 
+
 ## Feature engineering
 Extrac time related features according to EDA, say weekly click-count, interval between clicks from same user and etc.
 ### Click-count vs Time Series 1
@@ -15,13 +17,6 @@ Extrac time related features according to EDA, say weekly click-count, interval 
 ![R1](https://github.com/Azure-Whale/Ads-Fraudulent-Click-Traffic-Detection-/blob/master/R1.png)
 ### Click-count Distribution
 ![R2](https://github.com/Azure-Whale/Ads-Fraudulent-Click-Traffic-Detection-/blob/master/R2.png)
-## Steps
-• Performed EDA (Exploratory Data Analysis) on 10GB+ clicks data from mobile devices and preprocess the raw data via dealing with
-missing values, categorical feature encoding; identify unique user click by tracking clicks from same IP address, OS and ad channel
-
-• Conducted feature extraction by transforming raw time data into multiple high-quality features such as click interval, weekly clicks
-
-• Built LightGBM model via k-fold cross validation, evaluated prediction results with ROC AUC (0.97) and identified key factors 
-## Results
+## Results of model
 ![R](https://github.com/Azure-Whale/Ads-Fraudulent-Click-Traffic-Detection-/blob/master/Results.png)
 
