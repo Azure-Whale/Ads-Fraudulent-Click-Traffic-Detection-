@@ -21,4 +21,6 @@ Extrac time related features according to EDA, say weekly click-count, interval 
 ![R2](https://github.com/Azure-Whale/Ads-Fraudulent-Click-Traffic-Detection-/blob/master/R2.png)
 ## Results of model
 ![R](https://github.com/Azure-Whale/Ads-Fraudulent-Click-Traffic-Detection-/blob/master/Results.png)
+## Conclusion
+It turns out that after the fine-tunning on the parameters as well as the correct feature extractions, the embedded models reach a high accuracy which is 97%. The model I trained has a strong confidence to predict users who are cheating on ads clicks
 
